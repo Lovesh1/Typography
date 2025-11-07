@@ -341,25 +341,25 @@ function App() {
           <button
             className={`px-8 py-3 text-base font-medium rounded-l-full border-2 transition-all cursor-pointer ${
               details
-                ? "bg-white text-[#456DA8] border-blue-600"
-                : "bg-blue-600 text-white border-blue-600"
+                ? "bg-white/31 text-[#3B82F6] border-blue-600"
+                : "bg-[#3B82F6] text-white border-blue-600"
             }`}
             onClick={() => setDetails(false)}
           >
             <span className="inline-flex items-center gap-2">
-              <span className="text-lg"><DisplayIcon/></span> Display Text
+              <span className="text-lg"><DisplayIcon className={details ? " text-[#3B82F6]" : "text-white"}/></span> Display Text
             </span>
           </button>
           <button
             className={`px-8 py-3 text-base font-medium rounded-r-full border-2 border-l-0 transition-all cursor-pointer ${
               !details
-                ? "bg-white text-[#456DA8] border-blue-600"
-                : "bg-blue-600 text-white border-blue-600"
+                ? "bg-white/31 text-[#456DA8] border-blue-600"
+                : "bg-[#3B82F6] text-white border-blue-600"
             }`}
             onClick={() => setDetails(true)}
           >
             <span className="inline-flex items-center gap-2">
-              <span className="text-lg"><CalculationIcon/></span> View Calculations
+              <span className="text-lg"><CalculationIcon className={details ? "  text-white" : "text-[#3B82F6]"}/></span> View Calculations
             </span>
           </button>
         </div>
