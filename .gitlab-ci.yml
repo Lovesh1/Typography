@@ -1,0 +1,48 @@
+stages:
+  - install
+  - test
+  - build
+  # - deploy
+
+# -------------------------
+# Install dependencies
+# -------------------------
+install_dependencies:
+  stage: install
+  image: node:18
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+
+# -------------------------
+# Run tests
+# -------------------------
+test_app:
+  stage: test
+  image: node:18
+  script:
+    - npm test
+
+# -------------------------
+# Build application
+# -------------------------
+build_app:
+  stage: build
+  image: node:18
+  script:
+    - npm run build
+  dependencies:
+    - install_dependencies
+
+# -------------------------
+# Deploy application
+# -------------------------
+# deploy_app:
+#   stage: deploy
+#   image: node:18
+#   script:
+#     - echo "Deploy commands here"
+#   only:
+#     - main
