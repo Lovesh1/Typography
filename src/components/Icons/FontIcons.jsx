@@ -158,3 +158,80 @@ export const LineIcon = ({width, height}) => (
     />
   </svg>
 );
+
+export const CalculationIcon = () => (
+ <svg
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+   
+  >
+    <path
+      d="M20.0002 2H4.00033C3.44805 2 3.00033 2.4477 3.00032 2.99998L3 21C2.99999 21.5523 3.44771 22 4 22H20.0002C20.5525 22 21.0002 21.5523 21.0002 21V3C21.0002 2.44771 20.5525 2 20.0002 2Z"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17.5 5H6.5V9.5H17.5V5Z"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinejoin="round"
+    />
+    <path
+      d="M6 14L9.5 17.5"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9.5 14L6 17.5"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14 17.5H18"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14 14.5H18"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const DisplayIcon = () => (
+  <svg
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M2 4H16" stroke="#3B82F6" strokeWidth={2} strokeLinecap="round" />
+    <path
+      d="M14 10.5H22"
+      stroke="#3B82F6"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+    <path d="M9 21V4" stroke="#3B82F6" strokeWidth={2} strokeLinecap="round" />
+    <path
+      d="M18 21V10.5"
+      stroke="#3B82F6"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+  </svg>
+);

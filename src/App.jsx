@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { EyeIcon, LineIcon, ScaleIcon, TextIcon } from "./components/Icons/FontIcons";
+import { CalculationIcon, DisplayIcon, EyeIcon, LineIcon, ScaleIcon, TextIcon } from "./components/Icons/FontIcons";
 
 function App() {
   const [baseSize, setBaseSize] = useState(16);
@@ -277,8 +277,6 @@ function App() {
           </div>
           {/* </div> */}
 
-          {/* Configuration Section */}
-          {/* <div className="bg-white/30 stroke-[1E293B]/12 rounded-2xl shadow-lg p-8 mb-6"> */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Base Size */}
             <div>
@@ -349,7 +347,7 @@ function App() {
             onClick={() => setDetails(false)}
           >
             <span className="inline-flex items-center gap-2">
-              <span className="text-lg">T₁</span> Display Text
+              <span className="text-lg"><DisplayIcon/></span> Display Text
             </span>
           </button>
           <button
@@ -361,7 +359,7 @@ function App() {
             onClick={() => setDetails(true)}
           >
             <span className="inline-flex items-center gap-2">
-              <span className="text-lg">📊</span> View Calculations
+              <span className="text-lg"><CalculationIcon/></span> View Calculations
             </span>
           </button>
         </div>
