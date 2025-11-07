@@ -337,34 +337,47 @@ function App() {
         </div>
 
         {/* Toggle Buttons */}
-        <div className="flex justify-center gap-0 mb-8 ">
-          <button
-            className={`px-8 py-3 text-base font-medium rounded-l-full border-2 transition-all cursor-pointer ${
-              details
-                ? "bg-white/31 text-[#3B82F6] border-blue-600"
-                : "bg-[#3B82F6] text-white border-blue-600"
-            }`}
-            onClick={() => setDetails(false)}
-          >
-            <span className="inline-flex items-center gap-2">
-              <span className="text-lg"><DisplayIcon className={details ? " text-[#3B82F6]" : "text-white"}/></span> Display Text
-            </span>
-          </button>
-          <button
-            className={`px-8 py-3 text-base font-medium rounded-r-full border-2 border-l-0 transition-all cursor-pointer ${
-              !details
-                ? "bg-white/31 text-[#456DA8] border-blue-600"
-                : "bg-[#3B82F6] text-white border-blue-600"
-            }`}
-            onClick={() => setDetails(true)}
-          >
-            <span className="inline-flex items-center gap-2">
-              <span className="text-lg"><CalculationIcon className={details ? "  text-white" : "text-[#3B82F6]"}/></span> View Calculations
-            </span>
-          </button>
-        </div>
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex rounded-full bg-white/10 p-1 border border-[#3B82F6]">
+              <button
+                onClick={() => setDetails(true)}
+                aria-pressed={details}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all text-sm font-medium ${
+            details
+              ? "bg-[#3B82F6] text-white"
+              : "bg-transparent text-[#3B82F6]"
+                }`}
+              >
+                <span className="inline-flex items-center">
+            <CalculationIcon
+              width={18}
+              height={18}
+              className={details ? "text-white" : "text-[#3B82F6]"}
+            />
+                </span>
+                <span>View Calculations</span>
+              </button>
 
-        {/* Results Section */}
+              <button
+                onClick={() => setDetails(false)}
+                aria-pressed={!details}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all text-sm font-medium ${
+            !details
+              ? "bg-[#3B82F6] text-white"
+              : "bg-transparent text-[#456DA8]"
+                }`}
+              >
+                <span className="inline-flex items-center">
+            <DisplayIcon
+              width={18}
+              height={18}
+              className={!details ? "text-white" : "text-[#456DA8]"}
+            />
+                </span>
+                <span>Display Text</span>
+              </button>
+            </div>
+          </div>
         <div className="space-y-6">
           {results.map((result, index) => (
             <div key={index} className="bg-white/31 stroke-[1E293B]/12 rounded-2xl shadow-lg p-8">
